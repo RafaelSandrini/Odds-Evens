@@ -1,5 +1,5 @@
 # Odds-Evens
-Odds & Evens is a game developed for my course of Software Development at Mohawk College.
+Odds & Evens is a game developed mainly in JS.
 
 For this game, I'm using:
 HTML;
