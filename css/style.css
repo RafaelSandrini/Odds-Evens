@@ -1,0 +1,219 @@
+/* 
+author: Rafael Sandrini Ferreira
+
+Date: 2022/02/22
+
+this file have the code for the CSS style
+for the game Odds and Evens
+
+*/
+
+/* font style from cdnfonts.com for alien style */
+@import url('https://fonts.cdnfonts.com/css/native-alien');
+@import url('https://fonts.cdnfonts.com/css/lombax');
+@import url('https://fonts.cdnfonts.com/css/alien-strawberry');
+/* Importing Fonts stops here */
+
+/* INTRODUCTION STARTS HERE */
+.introduction {
+    height: 100vh;
+    background-image: url(../Images/introduction.png);
+    background-size: cover;
+    color: green;    
+}
+
+.introduction .style1{
+    padding-top: 20%;
+    font-family: 'Native Alien', sans-serif;
+}
+
+.introduction .style2 {
+    font-family: 'Lombax', sans-serif;
+}
+
+.loading40, .loading70, .loading100 {
+    display: none;
+}
+
+/* INTRODUCTION ENDS HERE */
+
+/* FORM STARTS HERE */
+.form {
+    padding-top: 30px;
+    height: 100vh;
+    background-image: url(../Images/introduction.png);
+    background-size: cover;
+    display: none;
+}
+
+.form-box {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.form label {
+    font-family: 'Native Alien', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: green;
+}
+
+.form select {
+    max-width: 500px;
+}
+
+.form .submit {
+    padding: 50px;
+    font-family: 'Native Alien', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.form .submit input{
+    padding: 20px;
+    color: green;
+    background-color: black;
+}
+
+.form .warningMessageName {
+    display: none;
+    font-family: 'Native Alien', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: red;
+}
+
+.form .warningMessageSpecie {
+    display: none;
+    font-family: 'Native Alien', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: red;
+}
+
+/* FORMS ENDS HERE */
+
+/* MAIN SCREEN STARTS HERE */
+/* INFO AND BUTTONS STARTS HERE*/
+
+.info {
+    display: none;
+}
+
+.infoData {
+    font-weight: bold;
+    color: white;
+}
+
+.infoData p {
+    font-family: 'Native Alien', sans-serif;
+    margin: 0;
+    padding: 5px;
+}
+
+.showClass, .showName, .showScore {
+    color: lightgreen;  
+}
+
+.buttons {
+    margin-bottom: 30px;
+    font-family: 'Native Alien', sans-serif;
+}
+
+.button-play, .button-restart{
+    font-family: 'Native Alien', sans-serif;
+    color: green;
+    font-size: 3rem;
+    background-color: black;
+}
+
+.button-choice {
+    color: black;
+    background-color: darkgreen;
+    font-size: 2rem;
+}
+/* INFO AND BUTTONS STOPS HERE */
+
+/* FULL SCREEN AND GAME SCREEN STARTS HERE */
+.fullScreen {
+    background-image: url(../Images/earth.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    height: 100vh;
+    display: none;
+}
+
+.gameScreen {
+    display: none;
+    height: 100vh;
+}
+
+.top {
+    height: 40%;
+}
+
+.top img{
+    max-height: 95%;
+}
+
+.oddOrEven {
+    height: 10%;
+    color: red;
+    font-family: 'Native Alien', sans-serif;
+}
+
+.bottom {
+    height: 50%;
+}
+
+.bottom img {
+    max-height: 90%;
+}
+
+/* FULL SCREEN AND GAME SCREEN STOPS HERE */
+
+/* HELP STARTS HERE */
+.button-help, .button-close {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Native Alien', sans-serif;
+}
+
+.helpText {
+    color: white;
+    font-weight: bold;
+    display: none;
+    width: 90%;
+    /* margin-left: 5%; */
+    margin-top: 10%;
+}
+
+/* HELP ENDS HERE */
+
+/* END MESSAGE STARTS HERE */
+.endMessageLoser, .endMessageWinner {
+    margin-top: 60px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    display: none;
+    font-family: 'Native Alien', sans-serif;
+    font-size: 4rem;
+}
+
+.restart {
+    width: 100%;
+    display: none;
+    margin-top: 150px;
+}
+/* END MESSAGE ENDS HERE */
+/* MAIN SCREEN ENDS HERE */
+
+/* FOOTER STARTS HERE */
+footer {
+    display: block;
+    font-size: 0.8em;
+}
+/* FOOTER ENDS HERE */
