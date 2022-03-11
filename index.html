@@ -1,0 +1,205 @@
+<!-- Author: Rafael Sandrini Ferreira
+
+Date: 2022/02/22
+
+Here is the html file for Odds and Evens game.
+
+To use this file, is required a js and a css file.
+
+It has features using Bootstrap, javascript and CSS.
+
+This page fits for wider screens also to mobile screen with 320px wide.
+
+For some parts, I have been use the support from 
+https://www.w3schools.com/
+https://getbootstrap.com/
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link for bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- link for javascript -->
+    <script src="js/oddsAndEvens.js"></script>
+    <!-- link for CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Odds and Evens</title>
+</head>
+<body>
+    <!-- Loagind Screen Starts Here -->
+    <div class="introduction text-center">
+        <h1 class="style1">Odds and Evens</h1>
+        <h1 class="style2">Odds and Evens</h1>
+        <p></p>
+        <div class="loading10">
+            <h3>Loading...</h3>
+        </div>
+        <div class="loading40">
+            <h3>Loading Planets...</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                <!-- https://getbootstrap.com/docs/5.0/components/progress/ -->
+            </div>
+        </div>
+        <div class="loading70">
+            <h3>Loading Players...</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="loading100">
+            <h3>Loading Choices...</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 99%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>        
+    </div>
+    <!-- Loading Screen Ends Here -->
+    <!-- Form Starts Here -->
+    <div class="form">
+        <div class="form-box">
+            <form class="text-center" id="userRegister">
+                <!-- Form input Name Starts Here -->
+                <div class="Player">
+                    <label for="Player">Name:</label>
+                    <div>
+                        <input type="text" class="nameField form-control form-control-lg" id="Player" placeholder="Insert your name" value="">
+                        <div class="warningMessageName">
+                            <p>Name must have 4-8 ascending letters.</p>
+                        </div>
+                    </div>                
+                </div>
+                <!-- Form input Name Ends Here -->
+                <!-- Form Select Specie Starts Here -->
+                <div class="Specie">
+                    <label for="Specie">Specie:</label>
+                    <div>
+                        <select id="Specie" class="specieField form-control form-control-lg">
+                            <option value="Choose">Choose an Option</option>
+                            <option value="Human">Human</option>
+                            <option value="Alien">Alien</option>
+                        </select>
+                        <div class="warningMessageSpecie">
+                            <p>Choose between Alien or Human.</p>
+                        </div>
+                    </div>                    
+                </div>
+                <!-- Form Select Specie Ends Here -->
+                <!-- Form Button Submit Starts Here -->
+                <div class="submit">
+                    <input type="submit" class="submit-button" value="GO">
+                </div>
+                <!-- Form Button Submit Ends Here -->
+            </form>
+        </div>        
+    </div>
+    <!-- Form Ends Here -->
+    <!-- Main Screen Starts Here -->
+        <!-- Main Screen divided in 2 column -->
+            <!-- https://getbootstrap.com/docs/5.0/layout/grid/ -->
+    <div class="fullScreen container-fluid">
+        <div class="row">
+            <!-- Left Column Starts Here -->
+            <div class="col text-center">
+                <div class="info">
+                    <!-- Buttons Starts Here -->
+                    <div class="buttons">
+                        <div class="button choiceOddOrEven text-center">
+                            <div>
+                                <input class="button-choice choiceOdd" type="button" value="ODD">
+                            </div>
+                            <div>
+                                <input class="button-choice choiceEven" type="button" value="EVEN">
+                            </div>
+                        </div>
+                        <div class="button button-human text-center">
+                            <input class="button-choice Choice1" type="button" value="1">
+                            <input class="button-choice Choice2" type="button" value="2">
+                            <input class="button-choice Choice3" type="button" value="3">
+                            <input class="button-choice Choice4" type="button" value="4">
+                            <input class="button-choice Choice5" type="button" value="5">
+                        </div>
+                        <div class="button button-alien text-center">
+                            <input class="button-choice Choice01" type="button" value="1">
+                            <input class="button-choice Choice02" type="button" value="2">
+                            <input class="button-choice Choice03" type="button" value="3">        
+                        </div>
+                        <div class="button text-center">
+                            <input class="button-play" type="button" value="PLAY">       
+                        </div>
+                    </div>
+                    <!-- Buttons Ends Here -->
+                    <!-- Info Starts Here -->
+                    <div class="infoData display-6 text-center">
+                        <div><p>Class:</p></div>
+                        <div class="showClass"><p></p></div>
+                        <div><p>Name:</p></div>
+                        <div class="showName"><p></p></div>
+                        <div><p>Score: <br></p></div>
+                        <div class="showScore"><p></p></div>
+                    </div>
+                    <!-- Info Ends Here -->
+                    
+                </div>
+            </div>
+            <!-- Left Column Ends Here -->
+            <!-- Right Column Starts Here -->
+            <div class="col">
+                <!-- Game Screen Starts Here -->
+                <div class="gameScreen">
+                    <div class="top">
+                        <picture><img class="top-image img-fluid mx-auto d-block" src="Images/human/h0r.png" alt=""></picture>
+                    </div>
+                    
+                    <div class="oddOrEven text-center display-4">
+                        <p></p>
+                    </div>
+                    <div class="bottom">
+                        <picture><img class="bottom-image img-fluid mx-auto d-block" src="Images/human/h0.png" alt=""></picture>
+                    </div>
+                </div>
+                <!-- Game Screen Ends Here -->
+            </div>
+            <!-- Right Column Ends Here -->
+        </div>
+        <!-- Help Feature Starts Here -->
+        <div class="button help position-absolute bottom-0 start-0">
+            <input type="button" class="btn-danger button-help" value="HELP">
+        </div>
+        <div class="helpText text-center position-absolute">
+            <p>On Odds and Evens you and your oponent have to reveal the fingers.</p>
+            <p>You will win or lose if they are odd or even.</p>
+            <p>1. First choose if you want bet Odd or Even.</p>
+            <p>2. Choose how many fingers you want to show.</p>
+            <p>3. Press Play.</p>
+            <P>4. Wait the results for the round and play again.</P>
+            <p>5. Who scores 3 first is the winner!</p>
+            <h3>Good Luck</h3>
+            <div class="button help">
+                <input type="button" class="btn-danger button-close" value="Close">
+            </div>
+        </div>
+        <!-- Help Feature Ends Here -->
+        <!-- End Messages Starts Here -->
+        <div class="endMessageLoser position-absolute text-center">
+            <p>LOSER!!!</p>
+        </div>
+        <div class="endMessageWinner position-absolute text-center">
+            <p>Winner!!!</p>
+        </div>
+        <div class="button restart text-center">
+            <input type="button" class="button-restart" value="RESTART">
+        </div>
+        <!-- End Messages Ends Here -->
+    </div>
+    <!-- Main Screen Ends Here -->
+    <footer class="position-absolute bottom-0 end-0 text-white">
+        <p>&#169; 2022, Rafael Sandrini Ferreira</p>
+    </footer>
+</body>
+</html>
